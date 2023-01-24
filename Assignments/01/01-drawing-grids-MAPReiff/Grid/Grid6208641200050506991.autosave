@@ -1,0 +1,19 @@
+
+int n = 7; // Changing this number should upadate the grid
+
+
+
+void setup(){
+  // Do all your drawing here OR if the drawing is complex, in new methods
+  // called from here.
+  
+  // This line will save your drawing to a file.  Please include the file with
+  // your submission.
+  
+  size(600, 400);
+  
+  println(height);
+
+  
+  save("grid-"+n+".png");
+}
