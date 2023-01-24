@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Simple Java Test",
+      "setup": "javac *.java",
+      "run": "java Test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
