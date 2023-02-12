@@ -20,12 +20,7 @@ public class Fraction {
         this.numerator * other.denominator + other.numerator * this.denominator;
     newDenominator = this.denominator * other.denominator;
 
-    int gcd = gcd(newNumerator, newDenominator);
-
-    newNumerator /= gcd;
-    newDenominator /= gcd;
-
-    return new Fraction(newNumerator, newDenominator);
+    return new Fraction(newNumerator, newDenominator).reduce();
   }
 
   /**
@@ -41,12 +36,7 @@ public class Fraction {
         this.numerator * other.denominator - other.numerator * this.denominator;
     newDenominator = this.denominator * other.denominator;
 
-    int gcd = gcd(newNumerator, newDenominator);
-
-    newNumerator /= gcd;
-    newDenominator /= gcd;
-
-    return new Fraction(newNumerator, newDenominator);
+    return new Fraction(newNumerator, newDenominator).reduce();
   }
 
   /**
@@ -58,16 +48,10 @@ public class Fraction {
     int newNumerator = 0;   // Replace 0 with the correct calculation
     int newDenominator = 0; // Replace 0 with the correct calculation
 
-    newNumerator =
-        this.numerator * other.numerator;
+    newNumerator = this.numerator * other.numerator;
     newDenominator = this.denominator * other.denominator;
 
-    int gcd = gcd(newNumerator, newDenominator);
-
-    newNumerator /= gcd;
-    newDenominator /= gcd;
-
-    return new Fraction(newNumerator, newDenominator);
+    return new Fraction(newNumerator, newDenominator).reduce();
   }
 
   /**
@@ -78,6 +62,13 @@ public class Fraction {
   public Fraction reduce() {
     int newNumerator = 0;   // Replace 0 with the correct calculation
     int newDenominator = 0; // Replace 0 with the correct calculation
+
+    newNumerator = this.numerator;
+    newDenominator = this.denominator;
+    int gcd = gcd(newNumerator, newDenominator);
+    newNumerator /= gcd;
+    newDenominator /= gcd;
+
     return new Fraction(newNumerator, newDenominator);
   }
 
