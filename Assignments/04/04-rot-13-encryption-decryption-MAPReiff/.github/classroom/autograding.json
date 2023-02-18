@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Check file",
+      "setup": "javac *.java && java Decrypt",
+      "run": "grep -q Gregor decrypted.txt",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
