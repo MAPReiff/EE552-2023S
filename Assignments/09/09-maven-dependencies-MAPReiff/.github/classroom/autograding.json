@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Maven Exec",
+      "setup": "",
+      "run": "mvn clean compile exec:java",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
