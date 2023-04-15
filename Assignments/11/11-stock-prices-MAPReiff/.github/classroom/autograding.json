@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Exec Java",
+      "setup": "",
+      "run": "echo \"\\n\" | mvn compile exec:java",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
